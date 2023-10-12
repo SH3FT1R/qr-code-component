@@ -1,0 +1,116 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+  --fs-100: 15px;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+      2. Remove default margin
+    */
+* {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+}
+/*
+      Typographic tweaks!
+      3. Add accessible line-height
+      4. Improve text rendering
+    */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+      5. Improve media defaults
+    */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+      6. Remove built-in form typography styles
+    */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+      7. Avoid text overflows
+    */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+      8. Create a root stacking context
+    */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  min-height: 100dvh;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.qrcode-wrapper {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+img {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: var(--fs-100);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .qrcode-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  p {
+    padding-bottom: 25px;
+  }
+}
